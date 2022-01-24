@@ -36,8 +36,8 @@ const robot = {
     humanoid: false
 }
 
-const isDeathMachine = (year, {name, humanoid}) => {
-    if(!humanoid){
+const isDeathMachine = (year, {name, humanoid} = {}) => {  //object destructuring and default parameters, could also {name = "Paul", humanoid = true}
+    if(!humanoid){                                          //if no object passed as argt, still works and returns undefined
     console.log(`${name} is not a death machine in the year ${year}`)
     }
 }
